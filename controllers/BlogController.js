@@ -26,7 +26,7 @@ module.exports.addBlog = (req, res) => {
 module.exports.getBlogs = (req, res) => {
     logger.info("In getBlogs");
     var title = (typeof req.params.title != 'undefined') ? req.params.title : "";
-    logger.fine(title);
+    logger.info(title);
     var bolgData = "";
     if (title == "") {
         Blog.find({},
